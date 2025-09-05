@@ -102,7 +102,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         <div class="lg:col-span-1 flex justify-center lg:justify-start">
           <div class="w-[320px] h-[320px] bg-slate-100 rounded-md overflow-hidden shadow-lg">
-            <img src="images/free.png" alt="about-photo" class="w-full h-full object-cover">
+            <img src="images/myimage.jpeg" alt="about-photo" class="w-full h-full object-cover">
           </div>
         </div>
 
@@ -114,7 +114,7 @@
           </p>
 
           <div class="mt-6">
-            <a href="#" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-3 rounded-md inline-block">Download CV</a>
+            <a href="resume/Curriculum Vitae Amed Mohamed.pdf" target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-3 rounded-md inline-block">Download CV</a>
           </div>
         </div>
       </div>
@@ -206,60 +206,85 @@
 
     <!-- Portfolio gallery -->
     <section class="px-12 py-14 border-t">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex items-center justify-between">
-          <h4 class="text-lg font-semibold">My Work Examples</h4>
-          <a href="#" class="text-sm bg-slate-100 px-3 py-2 rounded">View All</a>
-        </div>
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center justify-between">
+      <h4 class="text-lg font-semibold">My Work Examples</h4>
+      <button id="viewAllBtn" class="text-sm bg-slate-100 px-3 py-2 rounded">View All</button>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-          <!-- sample thumbnails -->
-          <div class="bg-white rounded-lg overflow-hidden shadow">
-            <img src="images/thumb1.jpg" alt="work" class="w-full h-44 object-cover">
-            <div class="p-4">
-              <h5 class="font-semibold">Project Name</h5>
-              <p class="text-sm text-slate-500 mt-1">UI / Web</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-lg overflow-hidden shadow">
-            <img src="images/thumb2.jpg" alt="work" class="w-full h-44 object-cover">
-            <div class="p-4">
-              <h5 class="font-semibold">Landing Page</h5>
-              <p class="text-sm text-slate-500 mt-1">Branding</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-lg overflow-hidden shadow">
-            <img src="images/thumb3.jpg" alt="work" class="w-full h-44 object-cover">
-            <div class="p-4">
-              <h5 class="font-semibold">Mobile App UI</h5>
-              <p class="text-sm text-slate-500 mt-1">App Design</p>
-            </div>
-          </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+      <!-- first 3 (visible) -->
+      <div class="bg-white rounded-lg overflow-hidden shadow">
+        <img src="projects/project4.jpg" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Creative designs</h5>
+          <p class="text-sm text-slate-500 mt-1">UI / Web</p>
         </div>
       </div>
-    </section>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow">
+        <img src="projects/project2.jpg" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Landing Page</h5>
+          <p class="text-sm text-slate-500 mt-1">Branding</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow">
+        <img src="projects/project3.jpg" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Mobile App UI</h5>
+          <p class="text-sm text-slate-500 mt-1">App Design</p>
+        </div>
+      </div>
+
+      <!-- last 3 (hidden by default) -->
+      <div class="bg-white rounded-lg overflow-hidden shadow hidden extra-work">
+        <img src="projects/project1.jpg" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Mobile App UI</h5>
+          <p class="text-sm text-slate-500 mt-1">App Design</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow hidden extra-work">
+        <img src="projects/project5.jpg" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Mobile App UI</h5>
+          <p class="text-sm text-slate-500 mt-1">App Design</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden shadow hidden extra-work">
+        <img src="projects/project6.png" alt="work" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h5 class="font-semibold">Mobile App UI</h5>
+          <p class="text-sm text-slate-500 mt-1">App Design</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer id="contact" class="px-12 py-8 border-t">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
-          <div class="text-xl font-semibold">Wilkerson Hardin</div>
-          <div class="text-slate-500 text-sm">webdev & ux designer</div>
+          <div class="text-xl font-semibold">Said kamil</div>
         </div>
 
         <div class="text-slate-500 text-sm">© <span id="year"></span> All rights reserved.</div>
 
         <div class="flex gap-3">
-          <a href="#" class="p-2 rounded-md bg-slate-100">FB</a>
-          <a href="#" class="p-2 rounded-md bg-slate-100">TW</a>
-          <a href="#" class="p-2 rounded-md bg-slate-100">IN</a>
+          <a href="https://www.youtube.com/@Saidkaamil" target="_blank" class="p-2 rounded-md bg-slate-100">YT</a>
+          <a href="https://x.com/saidabdikamil?s=21" target="_blank" class="p-2 rounded-md bg-slate-100">X</a>
+          <a href="https://www.linkedin.com/in/said-abdi-hassan-73ba4b244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="p-2 rounded-md bg-slate-100">LI</a>
         </div>
       </div>
     </footer>
   </div>
 
-  <script src="main.js"></script>
+  <script src="scrip.js"></script>
 </body>
 </html>
