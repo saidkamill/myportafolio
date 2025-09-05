@@ -1,0 +1,37 @@
+/* styles.css - small custom rules for layout and exact visual touches */
+
+/* ensure body background shows a green frame on sides (like the design) */
+body {
+  background: linear-gradient(90deg, #05a86b 0 80px, #ffffff 80px 100%, #05a86b 100%);
+}
+
+/* slightly tighten font rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* make the large circular green decorative shape crisp */
+.ring-8 { box-shadow: 0 20px 40px rgba(2,6,23,0.06); }
+
+/* subtle dot pattern for sections if needed (demo) */
+.section-dots {
+  background-image: radial-gradient(#e6f9ef 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* responsive tweak for small screens */
+@media (max-width: 768px) {
+  body { background: #f8fffb; }
+}
+
+/* subtle floating effect for hero image */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.relative.z-10 { animation: floaty 6s ease-in-out infinite; }
+
+/* small utility to make the edges a bit softer */
+.rounded-xl { border-radius: 14px; }

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Wilkerson Hardin</title>
+
+  <!-- Tailwind CDN for quick dev (you can replace with a local build later) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind config (colors) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#e7fdf0',
+              100: '#c9fbe0',
+              500: '#10b981', /* green accent */
+              600: '#0ea76f'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-brand-500/5 text-slate-800 antialiased">
+
+  <!-- Page wrapper -->
+  <div class="min-h-screen max-w-7xl mx-auto bg-white shadow-lg overflow-hidden">
+
+    <!-- TOP NAV -->
+    <header class="flex items-center justify-between px-8 py-6">
+      <div class="flex items-center gap-4">
+        <div class="text-2xl font-extrabold text-slate-900">
+          <span class="text-slate-700">Port</span><span class="inline-block bg-brand-500 text-white px-2 rounded-md ml-1">folio</span>
+        </div>
+        <nav class="hidden md:flex gap-6 ml-8 text-slate-600">
+          <a href="#home" class="hover:text-slate-900">Home</a>
+          <a href="#about" class="hover:text-slate-900">About</a>
+          <a href="#services" class="hover:text-slate-900">Portfolio</a>
+          <a href="#contact" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#hire" class="bg-brand-500 hover:bg-brand-600 text-white font-medium px-4 py-2 rounded-md shadow">Hire me!</a>
+      </div>
+    </header>
+
+    <!-- HERO + left social icons -->
+    <main id="home" class="relative">
+      <!-- left social vertical -->
+      <div class="hidden lg:flex flex-col gap-4 absolute left-0 top-1/4 transform -translate-x-8">
+        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shadow">f</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shadow">t</a>
+        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shadow">in</a>
+      </div>
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-12 py-16 items-center">
+        <!-- left content -->
+        <div class="space-y-6 max-w-xl">
+          <p class="inline-block bg-green-100 text-brand-500 px-3 py-1 rounded-md text-sm font-semibold">Welcome! I'M</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Said kamil</h1>
+          <p class="text-slate-500 font-medium">Web Developer & UX Designer</p>
+
+          <p class="text-slate-600 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dolorum, rem,
+            deserunt magnam voluptatum minima saepe aliquid earum excepturi. I build beautiful
+            experiences and functional web apps.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="#contact" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-3 rounded-md font-medium shadow">Hire Me</a>
+            <a href="#about" class="border border-slate-300 px-5 py-3 rounded-md text-slate-700 hover:shadow">Explore</a>
+          </div>
+        </div>
+
+        <!-- right circular hero image / decorative shape -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- large decorative green shape -->
+            <div class="absolute -inset-6 rounded-full bg-brand-500/90 blur-[0.6px] z-0 hidden lg:block" style="width:380px;height:380px; transform: rotate(12deg)"></div>
+
+            <!-- circular photo -->
+            <div class="relative z-10 w-72 h-72 rounded-full ring-8 ring-white overflow-hidden shadow-2xl">
+              <!-- image: put your uploaded 'free.png' inside images/ -->
+              <img src="images/myimage.jpeg" alt="profile" class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="px-12 py-14 border-t">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-1 flex justify-center lg:justify-start">
+          <div class="w-[320px] h-[320px] bg-slate-100 rounded-md overflow-hidden shadow-lg">
+            <img src="images/free.png" alt="about-photo" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <span class="text-sm text-brand-500 font-semibold">ABOUT ME</span>
+          <h2 class="text-2xl md:text-3xl font-bold mt-2">Why hire me for your next project?</h2>
+          <p class="text-slate-600 mt-4 leading-relaxed">
+            I'm Creative Director and UI/UX Designer from New York, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <div class="mt-6">
+            <a href="#" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-3 rounded-md inline-block">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Features -->
+    <section id="services" class="px-12 py-14 border-t">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-xl font-semibold text-slate-700">My Provided Features</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <!-- card template -->
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center">💻</div>
+              <div>
+                <h4 class="font-semibold">Web Design</h4>
+                <p class="text-sm text-slate-500">Modern responsive interfaces and UX-focused layouts.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center">🎨</div>
+              <div>
+                <h4 class="font-semibold">Graphics Design</h4>
+                <p class="text-sm text-slate-500">Branding, visuals and illustrations for digital products.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center">🔧</div>
+              <div>
+                <h4 class="font-semibold">Web Development</h4>
+                <p class="text-sm text-slate-500">Full-stack web development and APIs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise / Skill bars -->
+    <section class="px-12 py-14 border-t">
+      <div class="max-w-6xl mx-auto">
+        <h4 class="text-lg font-semibold">My Expertise</h4>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div>
+            <div class="flex justify-between items-center">
+              <p class="font-medium">Web Design</p><p class="text-slate-500">95%</p>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-3">
+              <div class="h-2 rounded bg-brand-500" style="width:95%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <p class="font-medium">Graphic Design</p><p class="text-slate-500">85%</p>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-3">
+              <div class="h-2 rounded bg-brand-500" style="width:85%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <p class="font-medium">Application Development</p><p class="text-slate-500">90%</p>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-3">
+              <div class="h-2 rounded bg-brand-500" style="width:90%"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <p class="font-medium">Problem Solving</p><p class="text-slate-500">65%</p>
+            </div>
+            <div class="w-full bg-slate-100 h-2 rounded mt-3">
+              <div class="h-2 rounded bg-brand-500" style="width:65%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio gallery -->
+    <section class="px-12 py-14 border-t">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center justify-between">
+          <h4 class="text-lg font-semibold">My Work Examples</h4>
+          <a href="#" class="text-sm bg-slate-100 px-3 py-2 rounded">View All</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+          <!-- sample thumbnails -->
+          <div class="bg-white rounded-lg overflow-hidden shadow">
+            <img src="images/thumb1.jpg" alt="work" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h5 class="font-semibold">Project Name</h5>
+              <p class="text-sm text-slate-500 mt-1">UI / Web</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg overflow-hidden shadow">
+            <img src="images/thumb2.jpg" alt="work" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h5 class="font-semibold">Landing Page</h5>
+              <p class="text-sm text-slate-500 mt-1">Branding</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg overflow-hidden shadow">
+            <img src="images/thumb3.jpg" alt="work" class="w-full h-44 object-cover">
+            <div class="p-4">
+              <h5 class="font-semibold">Mobile App UI</h5>
+              <p class="text-sm text-slate-500 mt-1">App Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="px-12 py-8 border-t">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+          <div class="text-xl font-semibold">Wilkerson Hardin</div>
+          <div class="text-slate-500 text-sm">webdev & ux designer</div>
+        </div>
+
+        <div class="text-slate-500 text-sm">© <span id="year"></span> All rights reserved.</div>
+
+        <div class="flex gap-3">
+          <a href="#" class="p-2 rounded-md bg-slate-100">FB</a>
+          <a href="#" class="p-2 rounded-md bg-slate-100">TW</a>
+          <a href="#" class="p-2 rounded-md bg-slate-100">IN</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
